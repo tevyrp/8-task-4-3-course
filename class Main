@@ -1,0 +1,21 @@
+public class Main {
+    public static void main(String[] args) {
+        
+        Drawing drawing = new Drawing();
+
+        Shape circle = new Circle(10, 10, 5, "red");
+        Shape square = new Square(20, 20, 10, "blue");
+        drawing.addShape(circle);
+        drawing.addShape(square);
+
+        drawing.draw();
+
+        DrawingMemento memento = drawing.save();
+
+        drawing.removeShape(circle);
+
+        drawing.restore(memento);
+
+        drawing.draw();
+    }
+}
