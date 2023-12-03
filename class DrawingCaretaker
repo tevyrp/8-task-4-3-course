@@ -1,0 +1,11 @@
+public class DrawingCaretaker {
+    private List<DrawingMemento> mementos = new ArrayList<>();
+
+    public void addMemento(DrawingMemento memento) {
+        mementos.add(memento);
+    }
+
+    public DrawingMemento getMemento(int index) {
+        return mementos.get(index);
+    }
+}
